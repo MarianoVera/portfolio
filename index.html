@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Mariano Vera | Web Developer</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mariano Vera</title>
+    <meta name="description" content="Full-Stack Web Developer">
+    <meta name="author" content="Mariano Vera">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="./img/icon-portfolio.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="js/efectos.js"></script>
 </head>
 <body>
-    <header>
-        <div class="contenedor">
-            <nav class="menu">
-                <a href="#">About</a>
-                <a href="#">Projects</a>
-                <a href="#">Contact</a>
-            </nav>
+    <header id="header">
+            
+            <nav class="navbar navbar-dark fixed-top navbar-expand-lg" style="background-color: rgba(0, 0, 0, 0.733); padding: 1px;" style="align-content: center;" >
+                <a class="navbar-brand btn-home" href="#home"><img src="./img/icon-portfolio.png" alt="Logo" style="width:40px;"></a>
+                <button class="navbar-toggler" style="background-color: rgb(0, 0, 0)" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
 
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav" >
+                    <ul class="navbar-nav mr-auto mr-5" >
+                        <li class="nav-item">
+                            <a class="nav-link btn-home" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-about" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-project" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-contact" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </nav>
+            
+        <div class="contenedor"  id="home">
+           
             <div class="contenedor-texto">
                 <div class="texto">
                     <h1 class="nombre">Mariano Vera</h1>
@@ -28,29 +59,33 @@
     </header>
     
     <section class="main">
-        <section class="acerca-de">
+        <section class="acerca-de" id="acerca-de">
             <div class="contenedor">
                 <div class="foto">
                     <img src="img/perfil.jpg" height="155" alt="Mariano Vera">
                 </div>
-    
+
                 <div class="texto">
-                    <h3 class="titulo">Acerca de</h3>
-                    <p>Lorem ipsum <span class="bold">dolor</span> sit amet consectetur</p>
+                    <h3 class="titulo">About</h3>
+                    <h4 class="title"> Hi, I'm Mariano. Nice to meet you.</h4>
+                    <p> I'm a <span class="bold">Full-Stack Developer</span>. I like learn new technologies, research and I consider
+                        myself creative. My objective is to be in a work group where I can use
+                        all of my knowledge and carry on grow professional.</p>
+                    <h4 class="title">I hope we can meet!</h4>
                 </div>
             </div>
 
-            <section class="trabajos">
+            <section class="trabajos" id="projects">
                 <div class="contenedor">
                     <h3 class="titulo">Projects</h3>
                     <div class="contenedor-trabajos">
                         
                         <div class="trabajo">
                             <div class="thumb">
-                                <img src="img/finance.jpg" alt="react app">
+                                <a href="https://stupefied-wilson-75ecf7.netlify.app"> <img src="img/finance.jpg" alt="react app"> </a>
                             </div>
                             <div class="descripcion">
-                                <p class="nombre"> FinanceApp</p>
+                                <a href="https://stupefied-wilson-75ecf7.netlify.app" class="nombre"> FinanceApp </a> <br>
                                 <p class="categoria">HTML - CSS - JS - REACT</p>
                             </div>
                         
@@ -58,10 +93,10 @@
 
                         <div class="trabajo">
                             <div class="thumb">
-                                <img src="img/vet.jpg" alt="react app">
+                                <a href="https://nostalgic-pasteur-e0be31.netlify.app"> <img src="img/vet.jpg" alt="react app"> </a> 
                             </div>
                             <div class="descripcion">
-                                <p class="nombre">AppointmentApp</p>
+                                <a href="https://nostalgic-pasteur-e0be31.netlify.app" class="nombre">AppointmentApp</a> <br>
                                 <p class="categoria">HTML - CSS - JS - REACT</p>
                             </div>
                         
@@ -69,10 +104,10 @@
 
                         <div class="trabajo">
                             <div class="thumb">
-                                <img src="img/cafe.jpg" alt="front-end project">
+                              <a href="https://gracious-rosalind-f5eaf0.netlify.app/"> <img src="img/cafe.jpg" alt="front-end project"> </a>
                             </div>
                             <div class="descripcion">
-                                <p class="nombre">Café - San Francisco</p>
+                                <a href="https://gracious-rosalind-f5eaf0.netlify.app/" class="nombre">Café - San Francisco</a> <br>
                                 <p class="categoria">HTML - CSS - JS - JQUERY</p>
                             </div>
                         
@@ -80,10 +115,10 @@
 
                         <div class="trabajo">
                             <div class="thumb">
-                                <img src="img/store.jpg" alt="front-end project">
+                              <a href="https://inspiring-gates-8d8336.netlify.app/"> <img src="img/store.jpg" alt="front-end project"> </a>
                             </div>
                             <div class="descripcion">
-                                <p class="nombre">BA - Store</p>
+                                <a href="https://inspiring-gates-8d8336.netlify.app/" class="nombre">BA - Store</a> <br>
                                 <p class="categoria">HTML - CSS - JS - BOOTSTRAP</p>
                             </div>
                         
@@ -109,13 +144,17 @@
             </div>
         </section> -->
 
-        <section class="redes-contacto">
+        <section class="redes-contacto" id="contact">
             <div class="contenedor">
                 <a class="linkedin" href="https://www.linkedin.com/in/mariano-vera/"><i class="fab fa-linkedin-in"></i></a>
                 <a class="github" href="https://github.com/MarianoVera"> <i class="fab fa-github"></i> </a>
                 <a href="mailto:mariano.vera98@hotmail.com" class="email"> <i class="fas fa-envelope"></i> </a>
             </div>
         </section>
+
+        <div class="copyright">
+            <p> <span style="color: silver;"> Mariano Vera © </span>2020 </p>
+        </div>
 
     </footer>
 

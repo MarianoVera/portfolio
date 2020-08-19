@@ -19,40 +19,26 @@ body {
 /* HEADER */
 
 header {
-    background: url('../img/back1.jpg');
-    background-repeat: no-repeat;
+    background: url('../img/back.jpg');
+    /* background-repeat: no-repeat; */
+    background-size: cover;
     background-position: center;
-    max-height: 600px;
-}
-
-header .menu {
-    margin: 40px 0; 
-    text-align: right;
-}
-
-header .menu a {
-    margin: 0 20px; 
-    color: #fff;
-    padding-bottom: 9px;
-    display: inline-block;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    font-size: 1em;
-}
-
-header .menu a:hover {
-    border-bottom: 2px solid #fff;
+    background-attachment: fixed;
+    /* max-height: 1000px; */
+    width: 100%;
+    height: 110vh;
 }
 
 header .contenedor-texto {
     display: flex; /*Flexbox*/
     justify-content: center;
     align-content: center;
-    margin: 200px 0;
+    margin: 370px 0;
 }
 
 header .contenedor-texto .texto {
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    /* position: absolute; */
+    border: 5px solid rgba(255, 255, 255, 0.5);
     border-radius: 3px;
     display: inline-block;
     text-align: center;
@@ -93,7 +79,7 @@ header .contenedor-texto .texto .profesion {
 
 .main .acerca-de .foto img{
     vertical-align: top;
-    border-radius: 40%;
+    border-radius: 30%;
     border: 5px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -101,6 +87,14 @@ header .contenedor-texto .texto .profesion {
     color: #5a5a5a;
     font-weight: 600;
     font-size: 1em;
+    line-height: 30px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+.main .acerca-de .texto .title {
+    font-weight: 700;
+    font-size: 20px;
     line-height: 30px;
     width: 80%;
     margin: 40px auto;
@@ -116,17 +110,13 @@ header .contenedor-texto .texto .profesion {
 }
 
 .main .acerca-de .texto .bold {
-    color: #3895ea;
-    text-decoration: underline;
+    color: #1a5286;
+    /* text-decoration: wavy; */
 }
 
 .main .trabajos {
     background: #f2f2f2;
     padding: 60px 0;
-}
-
-.main .trabajos .contenedor {
-    overflow: hidden;
 }
 
 .main .trabajos .titulo {
@@ -161,13 +151,18 @@ header .contenedor-texto .texto .profesion {
     border-radius: 15px;
 }
 
+.main .trabajos .contenedor-trabajos .trabajo .thumb img:hover {
+    box-shadow: 3px 3px 3px #797b81;
+}
+
 .main .trabajos .contenedor-trabajos .trabajo .descripcion {
     text-align: center;
 }
 
 .main .trabajos .contenedor-trabajos .trabajo .descripcion .nombre {
     font-weight: 700;
-    color: #3895ea;
+    /* color: #3895ea; */
+    color: #1a5286;
     margin-bottom: 10px;
 }
 
@@ -177,25 +172,30 @@ header .contenedor-texto .texto .profesion {
 }
 
 /* FOOTER */
+footer {
+    background: #1e2b38;
+    margin: 0;
+    padding: 0;
+}
 
 footer .redes-contacto {
-    background: #1e2b38;
-    padding: 60px 0;
+    padding: 50px 0;
 }
 
 footer .redes-contacto .contenedor {
     display: flex;
     justify-content: center;
 }
+
 footer .redes-contacto a {
     color: #fff;
     text-align: center;
-    width: 100px;
+    width: 70px;
     display: block;
     padding: 15px 0;
     border-radius: 3px;
     font-size: 30px;
-    margin: 0 20px
+    margin: 0 10px
 }
 
 footer .redes-contacto .linkedin:hover {
@@ -208,4 +208,123 @@ footer .redes-contacto .github:hover {
 
 footer .redes-contacto .email:hover {
     background: #ffa930;
+}
+
+footer .copyright {
+    background: #000; 
+    text-align: center; 
+    color: rgb(7, 255, 234);
+    font-size: 13px;
+    padding-top: 15px;
+    padding-bottom: 3px;
+}
+
+/* MEDIA-QUERIES */
+
+@media screen and (max-width: 800px) {
+
+    header {
+        height: auto;
+        background-attachment: initial;
+    }
+
+    .main .trabajos .contenedor-trabajos .trabajo {
+        width: 46%;
+    }
+}
+
+/* ----- LANDSCAPE ----- */
+@media screen and (max-width: 850px) and (orientation: landscape) {
+
+    header {
+        height: 480px;
+    }
+
+    header .contenedor-texto {
+        margin: 100px;
+        margin-top: 180px;
+    }
+
+    .main .trabajos .contenedor-trabajos .trabajo {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) and (orientation: landscape) {
+
+    header {
+        height: 450px;
+    }
+
+    header .contenedor-texto {
+        margin: 50px;
+        margin-top: 160px;
+    }
+}
+/* ----- END-LANDSCAPE ----- */
+
+
+
+
+@media screen and (max-width: 500px) {
+    
+    header {
+        height: auto;
+        background-attachment: initial;
+    }
+
+    header .contenedor .contenedor-texto .texto .nombre {
+        font-size: 35px;
+    }
+
+    header .contenedor-texto {
+        margin: 300px 0;
+    }
+
+    header .contenedor-texto .texto .profesion {
+        font-size: 15px;
+    }
+    
+    .main .trabajos .titulo {
+        margin-bottom: 90px;
+    }
+
+    .main .trabajos .contenedor-trabajos {
+        display: flex; /*Flexbox */
+        flex-direction: column;
+        /* justify-content: center; */
+        align-content: center;
+        flex-wrap: wrap; /* Las imágenes que no entran, se ponen debajo*/
+        /* justify-content: space-between; */
+    }
+
+    .main .trabajos .contenedor-trabajos .trabajo {
+        width: 85%;
+        margin-bottom: 40px;
+    }
+
+    footer .redes-contacto .contenedor {
+        flex-wrap: wrap;
+        padding: 1px 0;
+    }
+
+    footer .copyright {
+        padding: 20px 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        background-attachment: initial;
+    }
+
+    header .contenedor .contenedor-texto .texto .nombre {
+        font-size: 28px;
+    }
+
+
+    footer .redes-contacto .contenedor {
+        flex-wrap: wrap;
+        padding: 1px 0;
+    }
 }
