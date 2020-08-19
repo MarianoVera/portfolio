@@ -1,5 +1,11 @@
 $(document).ready(function (){
 
+    // Navbar collapse after 'click'
+
+    $('.nav-link').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
+    });
+
     // 'Marino Vera - Web Developer' Effect
 
     if( $(window).width() > 800) {
@@ -67,8 +73,12 @@ $(document).ready(function (){
 
     $('.btn-contact').on('click', function(e){
         e.preventDefault();
+
+        $('html, body').animate({
+            scrollTop : contactMe 
+        }, 1000);
        
-        if( $(window).width() < 400) {
+        /* if( $(window).width() < 400) {
             
             $('html, body').animate({
                 scrollTop : contactMe - 350
@@ -79,13 +89,13 @@ $(document).ready(function (){
             $('html, body').animate({
                 scrollTop : contactMe - 200
             }, 1000);
-            
+
          } else {
 
                 $('html, body').animate({
-                    scrollTop : contactMe - 530
+                    scrollTop : contactMe 
                 }, 1000);
-            }
+            } */
     });
 });
 
